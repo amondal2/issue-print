@@ -1,0 +1,22 @@
+{
+  "name": "issue-print",
+  "version": "1.0.0",
+  "description": "A node CLI to print assigned Github issues in terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amondal2/issue-print.git"
+  },
+  "author": "agastya mondal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amondal2/issue-print/issues"
+  },
+  "bin": {
+    "issue-print": "./index.js"
+  },
+  "homepage": "https://github.com/amondal2/issue-print#readme"
+}
