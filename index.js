@@ -3,6 +3,7 @@ const program = require('commander');
 const { prompt } = require('inquirer');
 const fs = require('fs');
 const request = require('superagent');
+const path = require('path');
 
 program.command('configure')
   .action(async () => {
@@ -12,8 +13,8 @@ program.command('configure')
       message: 'Enter github access token',
     }];
     const answers = await prompt(questions);
-
-    await fs.writeFile('./config.txt', `${answers.accesstoken}\n`, (err) => {
+    const pathName = path.resolve(__dirname, 'config.txt');
+    await fs.writeFile(pathName, `${answers.accesstoken}\n`, (err) => {
       if (err) {
         console.log(`Error writing access token. Failed with ${err}`);
         throw err;
@@ -28,7 +29,8 @@ program.arguments('print')
     let accessToken = '';
     const endpoint = 'https://api.github.com/user/issues';
     try {
-      accessToken = fs.readFileSync('./config.txt', 'utf8').trim();
+      const pathName = path.resolve(__dirname, 'config.txt');
+      accessToken = fs.readFileSync(pathName, 'utf8').trim();
     } catch (err) {
       console.log(`Reading access token failed with error: ${err}`);
       console.log('Ensure you\'ve run issue-print configure before running this step.');
