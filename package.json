@@ -1,6 +1,6 @@
 {
   "name": "issue-print",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A node CLI to print assigned Github issues in terminal",
   "main": "index.js",
   "scripts": {
