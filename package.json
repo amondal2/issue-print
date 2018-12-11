@@ -21,7 +21,8 @@
   "homepage": "https://github.com/amondal2/issue-print#readme",
   "dependencies": {
     "commander": "^2.19.0",
-    "inquirer": "^6.2.1"
+    "inquirer": "^6.2.1",
+    "superagent": "^4.0.0"
   },
   "devDependencies": {
     "eslint": "^5.10.0",
